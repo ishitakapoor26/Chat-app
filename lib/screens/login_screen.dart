@@ -17,7 +17,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _auth = FirebaseAuth.instance;
   String email;
-  bool showSpinner;
+  bool showSpinner= false;
   String password;
 
   @override
@@ -54,6 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 8.0,
               ),
               TextField(
+                obscureText: true,
                 onChanged: (value) {
                   password=value;
                 },
